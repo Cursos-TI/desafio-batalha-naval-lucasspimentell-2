@@ -102,6 +102,300 @@ int soma = 0;
         printf("\n");
     }
 
+    printf("Hbilidades:\n");
+
+    printf("CONE : \n");
+
+    for (int i = 0; i < LINHA; i++)
+    {
+        for (int j = 0; j < COLUNA; j++)
+        {
+            matriz[i][j] = soma; 
+
+            matriz[1][7] = 5;
+            matriz[2][7] = 5;
+            matriz[3][7] = 5;
+            matriz[3][8] = 5;
+            matriz[3][6] = 5;
+            
+            
+
+           
+
+
+
+            printf("  %d  ",matriz[i][j]);
+
+        }
+        printf("\n");
+    }
+
+    printf("CRUZ : \n");
+
+    for (int i = 0; i < LINHA; i++)
+    {
+        for (int j = 0; j < COLUNA; j++)
+        {
+            matriz[i][j] = soma; 
+
+            matriz[1][2] = 5;
+            matriz[2][2] = 5;
+            matriz[3][2] = 5;
+            matriz[4][2] = 5;
+            matriz[2][1] = 5;
+            matriz[2][3] = 5;
+
+            printf("  %d  ",matriz[i][j]);
+
+        }
+        printf("\n");
+    }
+
+    printf("Octaedro : \n");
+
+    for (int i = 0; i < LINHA; i++)
+    {
+        for (int j = 0; j < COLUNA; j++)
+        {
+            matriz[i][j] = soma; 
+
+            matriz[5][2] = 5;
+            matriz[6][2] = 5;
+            matriz[7][2] = 5;
+            
+            matriz[6][1] = 5;
+            matriz[6][3] = 5;
+
+            printf("  %d  ",matriz[i][j]);
+
+        }
+        printf("\n");
+    }
+
+    printf("Escolha uma Hbilidade:\n");
+
+    printf("1 : Cone\n");
+    printf("2 : Cruz\n");
+    printf("3 : octaedro\n");
+
+    int opcao;
+    scanf("%d",&opcao);
+
+    switch (opcao)
+    {
+    case 1:
+
+        printf("#### HABILIDADE!!! -  Cone ####\n");
+
+        for (int i = 0; i < LINHA; i++)
+    {
+        for (int j = 0; j < COLUNA; j++)
+        {
+           
+            matriz[i][j] = soma; 
+
+            //Horizontalmente
+            matriz[6][4] = 3;
+            matriz[6][5] = 3;
+            matriz[6][6] = 3;
+
+            matriz[8][7] = 3;
+            matriz[8][8] = 3;
+            matriz[8][9] = 3;
+
+            // diagonal primaria
+
+            if (i==j)
+            {
+                
+                    
+                    for (int j = 1; j < 4; j++)
+                    {
+                        /* code */
+                        matriz[i][j] = 3; 
+                        
+                    }
+                
+                    
+            }
+            
+            // diagonal secundaria
+            
+            if (i+j == 9)
+            {
+                
+                    
+                    for (int j = 0; j < 3; j++)
+                    {
+                       
+                        matriz[i][j] = 3; 
+                        
+                    }
+                
+               
+                    
+            }
+
+            matriz[1][7] = 5;
+            matriz[2][7] = 5;
+            matriz[3][7] = 5;
+            matriz[3][8] = 5;
+            matriz[3][6] = 5;
+
+            
+            
+
+            
+            printf("  %d  ",matriz[i][j]);
+
+        }
+        printf("\n");
+    }
+        
+        break;
+
+    case 2:
+
+        printf("#### HABILIDADE!!! -  CRUZ ####\n");
+
+        for (int i = 0; i < LINHA; i++)
+    {
+        for (int j = 0; j < COLUNA; j++)
+        {
+           
+            matriz[i][j] = soma; 
+
+            //Horizontalmente
+            matriz[6][4] = 3;
+            matriz[6][5] = 3;
+            matriz[6][6] = 3;
+
+            matriz[8][7] = 3;
+            matriz[8][8] = 3;
+            matriz[8][9] = 3;
+
+            // diagonal primaria
+
+            if (i==j)
+            {
+                
+                    
+                    for (int j = 1; j < 4; j++)
+                    {
+                        /* code */
+                        matriz[i][j] = 3; 
+                        
+                    }
+                
+                    
+            }
+            
+            // diagonal secundaria
+            
+            if (i+j == 9)
+            {
+                
+                    
+                    for (int j = 0; j < 3; j++)
+                    {
+                       
+                        matriz[i][j] = 3; 
+                        
+                    }
+                
+               
+                    
+            }
+
+            matriz[1][2] = 5;
+            matriz[2][2] = 5;
+            matriz[3][2] = 5;
+            matriz[4][2] = 5;
+            matriz[2][1] = 5;
+            matriz[2][3] = 5;
+
+            printf("  %d  ",matriz[i][j]);
+
+        }
+        printf("\n");
+    }
+        printf("\n ACERTOU O NAVIO !!!!");
+        break;
+
+    case 3:
+
+        printf("#### HABILIDADE!!! -  OCTAEDRO ####\n");
+
+        for (int i = 0; i < LINHA; i++)
+    {
+        for (int j = 0; j < COLUNA; j++)
+        {
+           
+            matriz[i][j] = soma; 
+
+            //Horizontalmente
+            matriz[6][4] = 3;
+            matriz[6][5] = 3;
+            matriz[6][6] = 3;
+
+            matriz[8][7] = 3;
+            matriz[8][8] = 3;
+            matriz[8][9] = 3;
+
+            // diagonal primaria
+
+            if (i==j)
+            {
+                
+                    
+                    for (int j = 1; j < 4; j++)
+                    {
+                        /* code */
+                        matriz[i][j] = 3; 
+                        
+                    }
+                
+                    
+            }
+            
+            // diagonal secundaria
+            
+            if (i+j == 9)
+            {
+                
+                    
+                    for (int j = 0; j < 3; j++)
+                    {
+                       
+                        matriz[i][j] = 3; 
+                        
+                    }
+                
+               
+                    
+            }
+
+            matriz[5][2] = 5;
+            matriz[6][2] = 5;
+            matriz[7][2] = 5;
+            
+            matriz[6][1] = 5;
+            matriz[6][3] = 5;
+
+            printf("  %d  ",matriz[i][j]);
+
+
+
+        }
+        printf("\n");
+    }
+        printf("\n ACERTOU O NAVIO !!!!");
+        break;
+    
+    default:
+        break;
+    }
+
 
     return 0;
 }
