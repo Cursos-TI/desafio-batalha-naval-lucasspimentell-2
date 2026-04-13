@@ -34,7 +34,30 @@ int main() {
     // Exemplo para habilidade em cruz:
     // 0 0 1 0 0
     // 1 1 1 1 1
-    // 0 0 1 0 0
+    // 0 0 1 0 0char tabuleiro[10][10]= { // Declarando o tamanho da matriz e atribuindo os valores
+
+    {'0','0','0','0','0'},
+    {'0','0','0','0','0'},
+    {'s','0','0','0','0'},
+    {'s','0','s','s','s'},
+    {'s','0','0','0','0'}
+
+};
+
+for (int linha = 0; linha < 10; linha++)// primeiro loop para definir a linha 
+{
+    if(linha>9)break; // verificando se algo vai passar do tamanho da linha
+
+    for (int coluna = 0; coluna <10; coluna++)
+    {
+       if(coluna>9)break;// verificando se algo vai passar do tamanho da coluna
+
+        printf(" %c ", tabuleiro[linha][coluna]);
+    }
+    
+     printf("\n");
+}
+
 
     return 0;
 }
