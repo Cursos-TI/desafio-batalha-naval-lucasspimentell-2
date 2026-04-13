@@ -36,27 +36,71 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0char tabuleiro[10][10]= { // Declarando o tamanho da matriz e atribuindo os valores
 
-    {'0','0','0','0','0'},
-    {'0','0','0','0','0'},
-    {'s','0','0','0','0'},
-    {'s','0','s','s','s'},
-    {'s','0','0','0','0'}
+#define LINHA 10
+#define COLUNA 10
 
-};
 
-for (int linha = 0; linha < 10; linha++)// primeiro loop para definir a linha 
-{
-    if(linha>9)break; // verificando se algo vai passar do tamanho da linha
+int soma = 0;
 
-    for (int coluna = 0; coluna <10; coluna++)
+    int matriz[LINHA][COLUNA];
+
+    for (int i = 0; i < LINHA; i++)
     {
-       if(coluna>9)break;// verificando se algo vai passar do tamanho da coluna
+        for (int j = 0; j < COLUNA; j++)
+        {
+           
+            matriz[i][j] = soma; 
+            //Horizontalmente
+            matriz[6][4] = 3;
+            matriz[6][5] = 3;
+            matriz[6][6] = 3;
 
-        printf(" %c ", tabuleiro[linha][coluna]);
+            matriz[8][7] = 3;
+            matriz[8][8] = 3;
+            matriz[8][9] = 3;
+
+            // diagonal primaria
+
+            if (i==j)
+            {
+                
+                    
+                    for (int j = 1; j < 4; j++)
+                    {
+                        /* code */
+                        matriz[i][j] = 3; 
+                        
+                    }
+                
+                    
+            }
+            
+            // diagonal secundaria
+            
+            if (i+j == 9)
+            {
+                
+                    
+                    for (int j = 0; j < 3; j++)
+                    {
+                       
+                        matriz[i][j] = 3; 
+                        
+                    }
+                
+               
+                    
+            }
+
+            
+            
+
+            
+            printf("  %d  ",matriz[i][j]);
+
+        }
+        printf("\n");
     }
-    
-     printf("\n");
-}
 
 
     return 0;
